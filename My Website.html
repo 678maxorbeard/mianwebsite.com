@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dc212c9c87.js" crossorigin="anonymous"></script>
+    <title>Mian Danish</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+
+        body{
+            background-color: black;
+            color: #fff;
+        }
+        #header{
+            width: 100%;
+            height: 100vh;
+            background: url(./peakpx\ \(1\).jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container{
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            flex-wrap: wrap;
+            padding: 10px 10%;
+            position: sticky;
+            opacity: 0.8;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        #logo{
+            margin-left: -60rem;
+            cursor: pointer;
+            color: white;
+        }
+
+        span{
+            color: #f45;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+        ul li{
+            display: inline-block;
+        }
+
+        ul li a{
+            text-decoration: none;
+            margin: 1rem;
+            color: white;
+        }
+
+        ul li a:hover{
+            color: #ff004f;
+        }
+
+        .header-text{
+            color: white;
+            margin-top: 18%;
+            margin-left: 7rem;
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+
+        #main-head{
+            margin-top: 1rem;
+            font-size: 40px;
+        }
+
+        .para{
+            color: red;
+        }
+
+        .main{
+            color: #ff004f;
+        }
+
+
+
+
+
+        /* About */
+
+        #about{
+            padding: 8rem 0;
+            color: #ababab;
+        }
+
+        .row{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .about-col-1{
+            flex-basis: 35%;
+        }
+
+        .about-col-1 img{
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .about-col-2{
+            flex-basis: 60%;
+        }
+
+        .sub-title{
+            font-size: 60px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .tab-titles{
+            display: flex;
+            margin: 2rem 0 4rem;
+        }
+
+        .tab-links{
+            margin-right: 5rem;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .tab-links::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+
+        .tab-links.active-link::after{
+            width: 50%;
+        }
+
+        .tab-contants ul li{
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .tab-contants ul li span{
+            color: #b54769;
+            font-size: 14px;
+        }
+
+        .tab-contants{
+            display: none;
+        }
+
+        .tab-contants.active-tab{
+            display: block;
+        }
+
+
+        
+        /* services */
+
+
+
+        #services{
+            padding: 3rem 0;
+        }
+
+        .services-title{
+            font-size: 60px;
+            font-weight: 600;
+            color: #fff;
+            margin-right: 53rem;
+        }
+
+        .services-list{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin: 5rem;
+        }
+
+        .services-list div{
+            background: #262626;
+            padding: 4rem;
+            font-size: 13px;
+            font-weight: 300;
+            border-radius: 10px;
+            transition: background 0.5s, transition 0.5s;
+        }
+
+        .services-list div i{
+            font-size: 50px;
+            margin-bottom: 3rem;
+        }
+
+        .services-list div h2{
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .services-list div a{
+            text-decoration: none;
+            color: #fff;
+            margin-top: 2rem;
+            display: inline-block;
+        }
+
+        .services-list div:hover{
+            background: #ff004f;
+            transform: translateY(-10px);
+        }
+
+
+
+
+        /* Contact */
+
+
+        .contact-title{
+            font-size: 60px;
+            font-weight: 600;
+            color: #fff;
+            margin-right: 53rem;
+        }
+
+        /* .contact-left{
+            
+        } */
+
+        .contact-right{
+            margin-left: 40rem;
+            flex-basis: 60%;
+            margin-top: -22rem;
+        }
+
+        .contact-left p{
+            margin-top: 2rem;
+        }
+
+        .contact-left p i{
+            color: #ff004f;
+            margin-right: 1.5rem;
+            font-size: 25px;
+        }
+
+        .social-icons{
+            margin-top: 2.5rem;
+        }
+
+        .social-icons a{
+            text-decoration: none;
+            font-size: 30px;
+            margin-right: 1.5rem;
+            color: #ababab;
+            display: inline-block;
+            transition: transform 0.5s;
+        }
+
+        .social-icons a:hover{
+            color: #ff004f;
+            transform: translateY(-5px);
+        }
+
+        .btn.btn2{
+            display: inline-block;
+            background: #ff004f;
+            text-decoration: none;
+            margin-top: 2.5rem;
+            color: #fff;
+            border-radius: 5px;
+            padding: 0.8rem;
+            transition: transform 0.5s;
+        }
+
+        .btn.btn2:hover{
+            background: #f45;
+            transform: translateY(-2px);
+        }
+
+        .contact-right form{
+            width: 100%;
+            color: white;
+        }
+
+        form input, form textarea{
+            width: 100%;
+            border: 0;
+            outline: none;
+            background: #262626;
+            color: white;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 18px;
+            border-radius: 6px;
+        }
+
+        .but.but2{
+            font-size: 18px;
+            margin-top: 1rem;
+            border-radius: 5px;
+            background: #ff004f;
+            padding: 0.5rem;
+            cursor: pointer;
+            color: white;
+            transition: transform 0.5s;
+        }
+
+        .but.but2:hover{
+            background-color: #f45;
+            transform: translateY(-5px);
+        }
+
+
+
+        /* footer */
+
+        .copyright{
+            width: 100%;
+            text-align: center;
+            padding: 2.5rem;
+            background: #262626;
+            margin-top: 2rem;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h2 id="logo"><span>Mian</span> Danish</h2>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-text">
+            <p class="para">Web Developer</p>
+            <h1 id="main-head">Hi I'm <span class="main">Mian</span> <br>Danish from Pakistan</h1>
+        </div>
+    </header>
+
+
+
+    <!----------- About ------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./profile.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a professional Web Developer who is responsible for the design and 
+                        construction of websites. They ensure that sites meet user expectations 
+                        by ensuring they look good, run smoothly and offer easy access points with 
+                        no loading issues between pages or error messages.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experiance')">Experiance</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contants active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web Interfaces</li><br>
+                            <li><span>Web Develpment</span><br>Designing Websites</li><br>
+                            <li><span>Management System</span><br>Building Management System's</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contants" id="experiance">
+                        <ul>
+                            <li><span>March 2023 - current</span><br>JavaScript training at eWorx 
+                            Institute</li><br>
+                            <li><span>Feburary 2023 - March 2023</span><br>BootStrap from ThapaTechnical</li><br>
+                            <li><span>2022 - January 2023</span><br>C++ Management System at Superior</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contants" id="education">
+                        <ul>
+                            <li><span>2023</span><br>Web Development</li><br>
+                            <li><span>2022</span><br>C++</li><br>
+                            <li><span>2022</span><br>Building Management System's</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!---------- Services ---------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="services-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Web development is the building and maintenance of websites; 
+                        it's the work that happens behind the scenes to make a website 
+                        look great, work fast and perform well with a seamless user experience.</p>
+                        <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>UI UX designers create the user interface for an app, website, 
+                        or other interactive media. Their work includes collaborating 
+                        with product managers and engineers to gather requirements from 
+                        users before designing ideas that can be communicated using storyboards.</p>
+                        <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>C++ Systems</h2>
+                    <p>A management system is designed to identify and manage risks—safety, 
+                        environmental, quality, business continuity, food safety (and many others)
+                        —through an organized set of policies, procedures, practices, and resources 
+                        that guide the enterprise and its activities to maximize business value.</p>
+                        <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!---------- Contact ---------->
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="contact-title">Contact me</h1>
+                    <p><i class="fas fa-paper-plane"></i> miandanishsaleem0318@gmail.com</p>
+                    <p><i class="fas fa-square-phone"></i> 03310172286</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/mian.danish.792197?mibextid=LQQJ4d "><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/sardar_asad_27?s=11"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://instagram.com/mian_danish_24?igshid=OGQ5ZDc2ODk2ZA=="><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/m-danish-489a8b259"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="./My Work.zip" class="btn btn2">Download Work</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="but but2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    
+    <div class="copyright">
+        <p>Copyright <i class="fa-sharp fa-regular fa-copyright"></i> Mian. Made by Mian Danish</p>
+    </div>
+
+    <!-- JS of About -->
+    <script>
+        var tablinks = document.querySelectorAll(".tab-links");
+        var tabcontants = document.querySelectorAll(".tab-contants");
+
+        let opentab = ((tabname) =>{
+            for(link of tablinks){
+                link.classList.remove("active-link");
+            }
+
+            for(contant of tabcontants){
+                contant.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+
+            document.getElementById(tabname).classList.add("active-tab");
+        })
+    </script>
+</body>
+</html>
